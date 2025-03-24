@@ -1,0 +1,598 @@
+/* Global styles */
+
+/* type scale  : 1.25 */
+
+/* 
+  61px  -->  h1
+  48px  -->  h2
+  39px  -->  h3
+  31px  -->  h4
+  25px  -->  h5
+  20px  -->  h6
+  16px  -->  p
+  13px  --> small
+
+*/
+:root {
+  --dark-blue: rgb(42, 42, 93)
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+.clearfix {
+  clear: both;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("Fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.btn {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500
+}
+
+
+
+/* =================scrollNav================= */
+.scrollNav {
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  background-color: #BE9278;
+  padding: 10px;
+}
+
+/* ==============  preloader =============== */
+.preloader {
+  height: 100vh;
+  background-color: #f7f7f7;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.preloader-circle {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  box-shadow: 0px 1px 5px rgba(35, 181, 185, 0.15);
+  border: 1px solid #fff;
+  border-top-color: #BE9278;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  animation: spin 2s infinite;
+}
+
+.preloader img {
+  position: absolute;
+  top: calc(50% - 21px);
+  left: calc(50% - 21px);
+  /* transform: translate(-50%, -50%); */
+
+}
+
+@keyframes spin {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+
+}
+
+/* ================= Nabar =========== */
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+
+.fixed-bar {
+  position: fixed;
+  width: 100%;
+  z-index: 90;
+  box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+  animation: fadeInDown 300ms;
+}
+
+header {
+  background-color: #fff;
+}
+
+header img {
+  float: left;
+  margin: 30px 60px 0px 60px;
+}
+
+header .links {
+  float: right;
+
+}
+
+header ul {
+  list-style: none;
+  margin: 30px 70px 30px;
+  display: inline-block;
+}
+
+header li {
+  display: inline-block;
+  padding: 0px 35px;
+}
+
+
+header a {
+  font-size: 15px;
+  font-weight: 600;
+  color: #101A31;
+}
+
+
+
+.visit-us {
+  background-color: #BE9278;
+  padding: 30px 65px;
+}
+
+
+/* ================ hero section ============== */
+
+.hero-section {
+  height: 850px;
+  background: linear-gradient(to right, rgba(16, 26, 48, 0.7) 0%, rgba(16, 26, 48, 0.7) 12%, #101a31 91%, #101a31 100%), url("images/h1_hero.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+}
+
+.hero-content {
+
+  position: absolute;
+  left: 11.5%;
+  color: #fff;
+  bottom: 20%;
+  width: 40%;
+  overflow: hidden;
+}
+
+.hero-content img {
+  animation: spin 20s linear infinite;
+}
+
+.hero-content h1 {
+  animation: textFromLeft 2s ease-in-out 1;
+}
+
+.hero-content p {
+  animation: textFromLeft 2s ease-in-out .25s 1;
+}
+
+.hero-content a {
+  animation: textFromLeft 2s ease-in-out .5s 1;
+}
+
+@keyframes textFromLeft {
+  0% {
+    transform: translateX(-700px);
+  }
+
+  100% {
+    transform: translatex(0px);
+  }
+}
+
+.hero-content h1 {
+  font-size: 76px;
+  line-height: 83.6px;
+  font-weight: 600;
+  margin: 20px 0px 30px 0px;
+}
+
+.hero-content p {
+  line-height: 30px;
+  width: 78%;
+}
+
+.hero-content .our-services {
+  background-color: #be9278;
+  padding: 28px 60px;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.hero-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 750px;
+}
+
+
+.hero-img img {
+  height: 100%;
+  width: 660px;
+}
+
+
+/* ===================== main =============== */
+
+main {
+  /* background-color: lightblue; */
+  width: 80%;
+  margin: 0px auto;
+  padding: 100px 0px;
+
+}
+
+.offer {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(600px);
+  width: 33%;
+
+}
+
+@keyframes fadeInUp {
+
+  from {
+    transform: translateY(600px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+}
+
+.offer:hover {
+  img {
+    transform: scale(1.1);
+  }
+
+  span {
+    background: none;
+    color: #c6a16e;
+    border: 1px solid #c6a16e;
+  }
+
+  h3 {
+    color: #c6a16e;
+  }
+}
+
+.offer {
+
+  img,
+  h3,
+  span {
+    transition: all 0.7s;
+  }
+}
+
+.offer-img {
+  padding: 0px 40px;
+}
+
+.img-container {
+  width: 321px;
+  height: 404px;
+  overflow: hidden;
+
+
+}
+
+.offer img {
+  width: 100%;
+}
+
+.offer-content {
+  padding: 40px;
+  position: relative;
+
+}
+
+.offer-content span {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #c6a16e;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  line-height: 35px;
+  position: absolute;
+  left: -17px;
+  top: 25px;
+}
+
+.offer-content h3 {
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 600
+}
+
+.offer-content p {
+  line-height: 30px;
+  color: #101a31;
+  width: 80%;
+}
+
+
+/* ========= about ============ */
+
+.about {
+  width: 85%;
+  margin: 50px auto 150px;
+  position: relative;
+  height: 800px;
+}
+
+.about-img {
+  position: absolute;
+  z-index: 3;
+  top: 15%;
+}
+
+.about-img img {
+  width: 660px;
+  height: 570px;
+}
+
+.about-content {
+  position: absolute;
+  background-color: #f2e1d9;
+  right: 0;
+  height: 100%;
+  width: 70%;
+}
+
+
+
+.about-cap {
+  position: absolute;
+  top: 25%;
+  left: 37%;
+}
+
+.about-cap h2 {
+  font-size: 56px;
+  line-height: 67.2px;
+  font-weight: 600;
+  color:
+    #101a31
+}
+
+.about-cap .first-p {
+  font-size: 18px;
+  line-height: 30.6px;
+  color: #010a44;
+  margin: 25px 0px 20px 0px;
+}
+
+.about-cap .second-p {
+  font-size: 14px;
+  color: #10285d;
+  line-height: 30px
+}
+
+.about-cap .more-about-us {
+  background-color: #ba8d72;
+  padding: 25px 65px;
+  display: inline-block;
+  margin-top: 35px;
+}
+
+
+
+
+/* service */
+.service {
+  padding: 50px 150px;
+  color: #101A31;
+  line-height: 25px;
+}
+
+.discriptionService {
+  width: 42%;
+  margin: 0px auto;
+  text-align: center;
+  margin-bottom: 60px;
+  font-weight: 600;
+
+}
+
+.discriptionService h2 {
+  font-size: 53px;
+  margin-bottom: 35px;
+}
+
+
+.subService {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(600px);
+  width: 20%;
+  padding-left: 50px;
+}
+
+.subService h4 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 20px 0px;
+}
+
+
+/* video */
+
+video img {
+  width: 100%;
+}
+
+/* robart */
+
+.robart {
+
+  position: relative;
+  height: 400px;
+  color: #010a44;
+  padding-top: 200px;
+}
+
+.quotes {
+  position: absolute;
+  left: 300px;
+  z-index: -1;
+  top: 130px;
+
+}
+
+.robart p {
+  font-size: 19px;
+  line-height: 30px;
+
+
+}
+
+.robart>p,
+.subRobart {
+  width: 50%;
+  margin: 0px auto;
+}
+
+
+.subRobart section {
+  display: inline-block;
+  width: 60%;
+  position: relative;
+  top: -80px;
+  margin-top: 150px;
+}
+
+.subRobart section p {
+  color: #646D77;
+  font-size: 14px;
+}
+
+.subRobart section h4 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* follow */
+
+
+.follow .discription {
+  width: 40%;
+  text-align: center;
+  margin: 0px auto;
+  color: #010a44;
+}
+
+.follow .discription h2 {
+  font-size: 52px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.follow .discription p {
+  line-height: 25px;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.follow .images {
+  padding-left: 15%;
+  margin-bottom: 150px;
+}
+
+.follow .images img {
+  margin-right: 20px;
+}
+
+.instagramContainer {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  height: 500px;
+  width: 558px;
+}
+
+
+
+.instagramContainer div {
+  background-color: #010a445e;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 558px;
+  height: 500px;
+  opacity: 0;
+  transition: all ease-in-out .5s;
+  z-index: 10;
+}
+
+.instagramContainer:hover div {
+  opacity: 1;
+
+}
+
+.instagramContainer div a {
+  position: absolute;
+  top: 50%;
+  font-size: 30px;
+  color: #f7f7f7;
+  left: 50%;
+}
+
+
+
+
+/* ================= footer ============= */
+
+footer {
+  background-color: #111b33;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0px;
+
+}
