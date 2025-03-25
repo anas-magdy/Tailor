@@ -59,17 +59,17 @@ h6 {
 
 /* =================scrollNav================= */
 .scrollNav {
-  border-radius: 50%;
+  border-radius: 100%;
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 10;
   background-color: #BE9278;
-  padding: 10px;
+  padding: 13px;
 }
 
 .fa-arrow-up {
-  font-size: 25px;
+  font-size: 20px;
   color: white;
 }
 
@@ -498,13 +498,11 @@ video img {
 .secondRobert {
   width: 100%;
   position: absolute;
-  transition: all ease 1s;
+  transition: transform 1s ease;
   margin-left: 50px;
 }
 
-.secondRobert {
-  transform: translateX(1100px);
-}
+
 
 .firstRobart>p,
 .secondRobert>p,
@@ -545,8 +543,55 @@ video img {
 .active {
   color: #c39b83;
 }
+
 .active:hover {
   color: #c28864;
+}
+@keyframes sliderIn{
+  0%{
+    visibility: visible;
+    transform: translateX(1100px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+@keyframes sliderOut {
+  0% {
+    transform: translateX(0px);
+  }
+  99%{
+    transform: translateX(-1200px);
+  }
+  100% {
+    visibility: hidden;
+    transform: translateX(1100px);
+  }
+}
+@keyframes RsliderIn {
+  0% {
+    visibility: visible;
+    transform: translateX(-1100px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes RsliderOut {
+  0% {
+    transform: translateX(0px);
+  }
+
+  99% {
+    transform: translateX(1200px);
+  }
+
+  100% {
+    visibility: hidden;
+    transform: translateX(-1100px);
+  }
 }
 
 /* follow */
