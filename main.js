@@ -77,6 +77,7 @@
 var preloader = document.getElementsByClassName("preloader")[0];
 
 window.onload = function () {
+  setInterval(leftSlider,3500)
   setTimeout(function () {
     preloader.style.opacity = 0;
     preloader.style.transition = "opacity 0.3s ease";
@@ -96,7 +97,6 @@ console.log(offers);
 
 
 window.onscroll = function () {
-  console.log(scrollY)
   if (scrollY > 440) {
     header.classList.add("fixed-bar");
     offers[0].style.animation = "fadeInUp 1.5s forwards";
@@ -119,4 +119,44 @@ var scrollNav = document.getElementsByClassName("scrollNav")[0]
 scrollNav.onclick = function () {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 
+}
+var active = 1
+var robartNavigator = document.getElementsByClassName("robartNavigator")[0].children
+var firstRobart = document.getElementsByClassName("firstRobart")[0]
+var secondRobert = document.getElementsByClassName("secondRobert")[0]
+robartNavigator[0].onclick = leftSlider
+
+  
+  function leftSlider() {
+  if (active == 1) {
+    robartNavigator[1].classList.remove("active")
+    firstRobart.style.animation = "sliderOut  1s linear 1 forwards"
+    secondRobert.style.animation ="sliderIn 1s linear 1 forwards"
+    robartNavigator[2].classList.add("active")
+    active = 2
+  } else {
+    robartNavigator[2].classList.remove("active") 
+    robartNavigator[1].classList.add("active")
+    firstRobart.style.animation = "sliderIn  1s linear 1 forwards"
+    secondRobert.style.animation ="sliderOut 1s linear 1 forwards"
+    active = 1
+  }
+}
+robartNavigator[3].onclick = rightSlider
+
+
+  function rightSlider() {
+  if (active == 1) {
+    robartNavigator[1].classList.remove("active")
+    firstRobart.style.animation = "RsliderOut  1s linear 1 forwards"
+    secondRobert.style.animation = "RsliderIn 1s linear 1 forwards"
+    robartNavigator[2].classList.add("active")
+    active = 2
+  } else {
+    robartNavigator[2].classList.remove("active")
+    robartNavigator[1].classList.add("active")
+    firstRobart.style.animation = "RsliderIn  1s linear 1 forwards"
+    secondRobert.style.animation = "RsliderOut 1s linear 1 forwards"
+    active = 1
+  }
 }
