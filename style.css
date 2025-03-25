@@ -68,6 +68,11 @@ h6 {
   padding: 10px;
 }
 
+.fa-arrow-up {
+  font-size: 25px;
+  color: white;
+}
+
 /* ==============  preloader =============== */
 .preloader {
   height: 100vh;
@@ -317,8 +322,6 @@ main {
   width: 321px;
   height: 404px;
   overflow: hidden;
-
-
 }
 
 .offer img {
@@ -328,7 +331,6 @@ main {
 .offer-content {
   padding: 40px;
   position: relative;
-
 }
 
 .offer-content span {
@@ -471,11 +473,12 @@ video img {
 /* robart */
 
 .robart {
-
   position: relative;
   height: 400px;
+  width: 90%;
   color: #010a44;
   padding-top: 200px;
+  overflow: hidden;
 }
 
 .quotes {
@@ -489,16 +492,26 @@ video img {
 .robart p {
   font-size: 19px;
   line-height: 30px;
-
-
 }
 
-.robart>p,
+.firstRobart,
+.secondRobert {
+  width: 100%;
+  position: absolute;
+  transition: all ease 1s;
+  margin-left: 50px;
+}
+
+.secondRobert {
+  transform: translateX(1100px);
+}
+
+.firstRobart>p,
+.secondRobert>p,
 .subRobart {
   width: 50%;
   margin: 0px auto;
 }
-
 
 .subRobart section {
   display: inline-block;
@@ -516,6 +529,24 @@ video img {
 .subRobart section h4 {
   font-size: 22px;
   font-weight: 500;
+}
+
+.robartNavigator {
+  position: absolute;
+  bottom: 70px;
+  right: 200px;
+}
+
+.robartNavigator>* {
+  margin: 0px 7px;
+  font-size: 20px;
+}
+
+.active {
+  color: #c39b83;
+}
+.active:hover {
+  color: #c28864;
 }
 
 /* follow */
@@ -576,10 +607,10 @@ video img {
 
 }
 
-.instagramContainer div a {
+.instagramContainer div .fa-instagram {
   position: absolute;
   top: 50%;
-  font-size: 30px;
+  font-size: 35px;
   color: #f7f7f7;
   left: 50%;
 }
